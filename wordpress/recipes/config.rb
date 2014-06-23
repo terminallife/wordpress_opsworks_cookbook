@@ -15,14 +15,6 @@ node[:deploy].each do |app_name, deploy|
       :db_user =>     (deploy[:database][:username] rescue nil),
       :db_pass => (deploy[:database][:password] rescue nil),
       :db_name =>       (deploy[:database][:database] rescue nil),
-      :salt1 => rand(36**length).to_s(36),
-      :salt2 => rand(36**length).to_s(36),
-      :salt3 => rand(36**length).to_s(36),
-      :salt4 => rand(36**length).to_s(36),
-      :salt5 => rand(36**length).to_s(36),
-      :salt6 => rand(36**length).to_s(36),
-      :salt7 => rand(36**length).to_s(36),
-      :salt8 => rand(36**length).to_s(36),
     )
 
    only_if do
